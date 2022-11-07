@@ -1,0 +1,259 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a {
+  color: orangered;
+}
+/*---------------------------------------admin page----------------------*/
+.adminBody {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../assets/images/admin-background.jpg);
+  background-size: fit;
+  background-repeat: no-repeat;
+}
+.adminBody h1 {
+  background-color: whitesmoke;
+  padding: 1rem;
+  font-size: 48px;
+  position: fixed;
+  left: 1;
+  top: 0;
+  margin-top: 50px;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+.adminBody h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 24px;
+  text-decoration: underline;
+}
+.admin-inner-containers {
+  width: 30%;
+  background-color: whitesmoke;
+  padding: 10px;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+.item-container {
+  display: flex;
+  margin-bottom: 10px;
+  text-align: left;
+  border-bottom: 1px solid black;
+}
+.admin-inner-containers .div1 {
+  width: 30%;
+}
+.admin-inner-containers .div2 {
+  width: 70%;
+}
+.admin-login-container {
+  margin-top: 1rem;
+  margin-right: 1rem;
+  background-color: whitesmoke;
+  padding: 1rem;
+  position: fixed;
+  right: 0;
+  top: 0;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+#form:hover {
+  cursor: pointer;
+  color: green;
+}
+#btn:hover {
+  color: green;
+  cursor: pointer;
+}
+/*-----------------------------------delete page--------------------*/
+#deleteBtn:hover {
+  cursor: pointer;
+  color: red;
+  text-decoration: underline;
+}
+/*--------------------------checkout page---------------------------*/
+.checkoutBody {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../assets/images/default-background.jpg);
+}
+.checkoutBookContainer {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 40%;
+  height: 40%;
+  background-color: whitesmoke;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  position: relative;
+}
+.checkoutH3 {
+  font-size: 36px;
+  text-decoration: underline;
+}
+#checkoutBtn:hover {
+  cursor: pointer;
+  color: green;
+}
+.checkoutBookContainer h1 {
+  font-size: 36px;
+  text-decoration: underline;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+.indexLink {
+  color: black;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 1rem;
+}
+.indexLink button {
+  font-size: 18px;
+}
+.indexLink button:hover {
+  cursor: pointer;
+}
+.indexLink #button {
+  font-size: 18px;
+}
+.indexLink #button:hover {
+  cursor: pointer;
+}
+
+.item-container-index {
+  margin-bottom: 10px;
+  text-align: left;
+}
