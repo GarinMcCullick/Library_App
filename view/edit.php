@@ -19,10 +19,6 @@
     $book = getBook($id);
     editBook(); //edit book call back function
 
-    if (isset($_POST['editForm'])) { //if form is submitted go back to index page
-        header('Location: ../index.php');
-    }
-
     ?>
     <div class="checkoutBookContainer">
         <a class="indexLink" href="../index.php">
@@ -36,12 +32,20 @@
         <h2>
             <?php echo "-" . $book['book_name'] ?>
         </h2>
-        <form class="editForm" method="POST" action="" <?php  ?>>
-            <label>Book Title:</label>
-            <input type="text" name="editBookName" value="<?php echo $book['book_name'] ?>">
-            <input type="hidden" name="editBookID" value="<?php echo $book['book_id'] ?>">
-            <input type="submit" name="editForm" value="Change">
-        </form>
+        <?php if (!isset($_POST['editForm'])) {
+            echo  '<form class="editForm" method="POST" action="">';
+            echo  '<label>Book Title:</label>';
+            echo  '<input type="text" name="editBookName"';
+            echo   'value="';
+            echo   $book['book_name'] . '">';
+            echo  '<input type="hidden" name="editBookID"';
+            echo  "value=" . $book['book_id'] . ">";
+            echo  '<input type="submit" name="editForm" value="Change">';
+            echo  '</form>';
+        } else {
+            echo $book['book_name'] . ' has been updated!';
+        }
+        ?>
     </div>
 </body>
 
